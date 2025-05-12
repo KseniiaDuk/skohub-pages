@@ -1,0 +1,23 @@
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix ex: <https://w3id.org/exampleAnimals/>.
+
+ex:
+    a skos:ConceptScheme;
+    dct:description "My wonderful vocabulary of animals that I like."@en;
+    dct:title "Animals"@en;
+    skos:hasTopConcept ex:2261e, ex:9c40c, ex:b28fe.
+ex:2261e
+a skos:Concept; skos:prefLabel "Kraken"@de, "Octopus"@en; skos:topConceptOf ex: .
+ex:50a1e
+    a skos:Concept;
+    skos:broader ex:b28fe;
+    skos:inScheme ex:;
+    skos:prefLabel "Pony"@de, "Pony"@en.
+ex:9c40c
+a skos:Concept; skos:prefLabel "Cat"@en, "Katze"@de; skos:topConceptOf ex: .
+ex:b28fe
+    a skos:Concept;
+    skos:narrower ex:50a1e;
+    skos:prefLabel "Horse"@en, "Pferd"@de;
+    skos:topConceptOf ex: .
